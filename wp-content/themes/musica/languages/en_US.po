@@ -1,0 +1,2385 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Musica v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-12-13 09:22:42+0000\n"
+"Last-Translator: thanh4890 <thanh4890@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:12
+#: library/ini.php:150
+#@ musica
+msgid "404"
+msgstr ""
+
+#: 404.php:15
+#@ musica
+msgid "Page not found..."
+msgstr ""
+
+#: 404.php:16
+#@ musica
+msgid "We're sorry, but we can't find the page you were looking for. It's probably some thing we've done wrong but now we know about it we'll try to fix it. In the meantime, try one of this options:"
+msgstr ""
+
+#: 404.php:19
+#@ musica
+msgid "Go back to previous page"
+msgstr ""
+
+#: 404.php:21
+#@ musica
+msgid "Go to homepage"
+msgstr ""
+
+#: comments.php:3
+#@ musica
+msgid "Please do not load this page directly. Thanks!"
+msgstr ""
+
+#: comments.php:13
+#@ musica
+msgid "No Comments"
+msgstr ""
+
+#: comments.php:13
+#: library/includes/ajax.php:567
+#: library/includes/ajax.php:600
+#: library/includes/ajax.php:630
+#: library/includes/ajax.php:652
+#: library/includes/ajax.php:694
+#@ musica
+msgid "1 Comment"
+msgstr ""
+
+#: comments.php:13
+#: library/includes/ajax.php:567
+#: library/includes/ajax.php:600
+#: library/includes/ajax.php:630
+#: library/includes/ajax.php:652
+#: library/includes/ajax.php:694
+#@ musica
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:47
+#@ musica
+msgid "Pingback"
+msgstr ""
+
+#: comments.php:51
+#: comments.php:86
+#@ musica
+msgid "Edit"
+msgstr ""
+
+#: comments.php:82
+#@ musica
+msgid "at"
+msgstr ""
+
+#: comments.php:108
+#@ musica
+msgid "Name <span>(required):</span>"
+msgstr ""
+
+#: comments.php:113
+#@ musica
+msgid "Email <span>(required):</span>"
+msgstr ""
+
+#: comments.php:118
+#@ musica
+msgid "Website"
+msgstr ""
+
+#: comments.php:125
+#@ musica
+msgid "Your comment <span>(required):</span>"
+msgstr ""
+
+#: comments.php:132
+#, php-format
+#@ musica
+msgid "You must be <a href=\"%1$s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:133
+#, php-format
+#@ musica
+msgid "Logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgstr ""
+
+#: comments.php:133
+#@ musica
+msgid "Log out of this account"
+msgstr ""
+
+#: comments.php:133
+#@ musica
+msgid "Log out &raquo;"
+msgstr ""
+
+#: comments.php:134
+#@ musica
+msgid "Your email address will not be published. Required fields are marked"
+msgstr ""
+
+#: comments.php:138
+#@ musica
+msgid "Leave a reply"
+msgstr ""
+
+#: comments.php:139
+#@ musica
+msgid "Reply"
+msgstr ""
+
+#: comments.php:140
+#@ musica
+msgid "<span class=\"title-text\">Cancel</span>"
+msgstr ""
+
+#: comments.php:141
+#@ musica
+msgid "Post Comment"
+msgstr ""
+
+#: functions.php:48
+#: library/includes/class-tgm-plugin-activation.php:164
+#@ musica
+msgid "Install Required Plugins"
+msgstr ""
+
+#: functions.php:49
+#: library/includes/class-tgm-plugin-activation.php:165
+#@ musica
+msgid "Install Plugins"
+msgstr ""
+
+#: functions.php:50
+#: library/includes/class-tgm-plugin-activation.php:166
+#, php-format
+#@ musica
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: functions.php:51
+#@ musica
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:168
+#, php-format
+#@ musica
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/includes/class-tgm-plugin-activation.php:169
+#, php-format
+#@ musica
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:54
+#: library/includes/class-tgm-plugin-activation.php:170
+#, php-format
+#@ musica
+msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/includes/class-tgm-plugin-activation.php:171
+#, php-format
+#@ musica
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/includes/class-tgm-plugin-activation.php:172
+#, php-format
+#@ musica
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:57
+#: library/includes/class-tgm-plugin-activation.php:173
+#, php-format
+#@ musica
+msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/includes/class-tgm-plugin-activation.php:174
+#, php-format
+#@ musica
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:59
+#: library/includes/class-tgm-plugin-activation.php:175
+#, php-format
+#@ musica
+msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:60
+#: library/includes/class-tgm-plugin-activation.php:176
+#@ musica
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:61
+#: library/includes/class-tgm-plugin-activation.php:177
+#@ musica
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:62
+#: library/includes/class-tgm-plugin-activation.php:178
+#: library/includes/class-tgm-plugin-activation.php:490
+#@ musica
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: functions.php:63
+#: library/includes/class-tgm-plugin-activation.php:179
+#: library/includes/class-tgm-plugin-activation.php:1846
+#@ musica
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: functions.php:64
+#, php-format
+#@ musica
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: header.php:124
+#@ musica
+msgid "Menu"
+msgstr ""
+
+#: library/front.php:18
+#@ musica
+msgid "Main Menu"
+msgstr ""
+
+#: library/front.php:19
+#@ musica
+msgid "Footer Menu"
+msgstr ""
+
+#: library/front.php:315
+#, php-format
+#@ musica
+msgid "Page %s"
+msgstr ""
+
+#: library/front.php:320
+#@ musica
+msgid "Flexslider Post Image (Kopatheme)"
+msgstr ""
+
+#: library/front.php:321
+#@ musica
+msgid "Article List Post Image (Kopatheme)"
+msgstr ""
+
+#: library/front.php:322
+#@ musica
+msgid "Gallery Slideshow Image (Kopatheme)"
+msgstr ""
+
+#: library/front.php:323
+#@ musica
+msgid "Gallery Slideshow Thumbnail Image (Kopatheme)"
+msgstr ""
+
+#: library/front.php:324
+#@ musica
+msgid "Blog Image Size (Kopatheme)"
+msgstr ""
+
+#: library/front.php:340
+#: library/front.php:341
+#@ musica
+msgid "auto"
+msgstr ""
+
+#: library/front.php:384
+#: library/front.php:1679
+#: library/ini.php:5
+#: library/ini.php:122
+#@ musica
+msgid "Home"
+msgstr ""
+
+#: library/front.php:391
+#@ musica
+msgid "Blog"
+msgstr ""
+
+#: library/front.php:524
+#, php-format
+#@ musica
+msgid "<span class=\"%1$s\">Your search for \"%2$s\""
+msgstr ""
+
+#: library/front.php:529
+#, php-format
+#@ musica
+msgid "Posts created by %1$s"
+msgstr ""
+
+#: library/front.php:532
+#@ musica
+msgid "Error 404"
+msgstr ""
+
+#: library/front.php:588
+#@ musica
+msgid "Similar articles"
+msgstr ""
+
+#: library/front.php:720
+#@ musica
+msgid "Related portfolios"
+msgstr ""
+
+#: library/front.php:786
+#@ musica
+msgid "I recommend this page: "
+msgstr ""
+
+#: library/front.php:786
+#@ musica
+msgid ". You can read it on: "
+msgstr ""
+
+#: library/front.php:794
+#@ musica
+msgid "Share this Post"
+msgstr ""
+
+#: library/front.php:839
+#@ musica
+msgid "Posted by:"
+msgstr ""
+
+#: library/front.php:849
+#@ musica
+msgid "Follow:"
+msgstr ""
+
+#: library/front.php:852
+#: library/front.php:877
+#: library/includes/cpanel/theme-options/post.php:56
+#@ musica
+msgid "Facebook"
+msgstr ""
+
+#: library/front.php:856
+#: library/front.php:884
+#: library/includes/cpanel/theme-options/post.php:57
+#@ musica
+msgid "Twitter"
+msgstr ""
+
+#: library/front.php:860
+#@ musica
+msgid "Google+"
+msgstr ""
+
+#: library/front.php:880
+#@ musica
+msgid "Please enter your Facebook URL"
+msgstr ""
+
+#: library/front.php:887
+#@ musica
+msgid "Please enter your Twitter URL"
+msgstr ""
+
+#: library/front.php:891
+#@ musica
+msgid "Feed URL"
+msgstr ""
+
+#: library/front.php:894
+#@ musica
+msgid "Please enter your Feed URL"
+msgstr ""
+
+#: library/front.php:898
+#@ musica
+msgid "Google Plus"
+msgstr ""
+
+#: library/front.php:901
+#@ musica
+msgid "Please enter your Google Plus URL"
+msgstr ""
+
+#: library/front.php:905
+#@ musica
+msgid "Flickr"
+msgstr ""
+
+#: library/front.php:908
+#@ musica
+msgid "Please enter your Flickr URL"
+msgstr ""
+
+#: library/front.php:1875
+#@ musica
+msgid "Weather Forecast"
+msgstr ""
+
+#: library/includes/ajax.php:309
+#: library/templates/loop-single.php:19
+#@ musica
+msgid "Website:"
+msgstr ""
+
+#: library/includes/ajax.php:315
+#@ musica
+msgid "Oops! errors occured."
+msgstr ""
+
+#: library/includes/ajax.php:317
+#@ musica
+msgid "Success! Your email address has been sent."
+msgstr ""
+
+#: library/includes/ajax.php:419
+#@ musica
+msgid "Pin It"
+msgstr ""
+
+#: library/includes/ajax.php:424
+#@ musica
+msgid "I wanted you to see this site"
+msgstr ""
+
+#: library/includes/ajax.php:424
+#@ musica
+msgid "Share by Email"
+msgstr ""
+
+#: library/includes/ajax.php:424
+#@ musica
+msgid "Mail To"
+msgstr ""
+
+#: library/includes/ajax.php:468
+#, php-format
+#@ musica
+msgid "%1$s Likes"
+msgstr ""
+
+#: library/includes/ajax.php:540
+#@ musica
+msgid " Article"
+msgstr ""
+
+#: library/includes/ajax.php:541
+#@ musica
+msgid " Articles"
+msgstr ""
+
+#: library/includes/ajax.php:567
+#: library/includes/ajax.php:600
+#: library/includes/ajax.php:630
+#: library/includes/ajax.php:652
+#: library/includes/ajax.php:694
+#@ musica
+msgid "No Comment"
+msgstr ""
+
+#: library/includes/ajax.php:567
+#: library/includes/ajax.php:600
+#: library/includes/ajax.php:630
+#: library/includes/ajax.php:652
+#: library/includes/ajax.php:694
+#@ musica
+msgid "Comments Off"
+msgstr ""
+
+#: library/includes/ajax.php:603
+#: library/includes/ajax.php:661
+#: library/includes/ajax.php:697
+#@ musica
+msgid "Continue Reading &raquo;"
+msgstr ""
+
+#: library/includes/ajax.php:754
+#@ musica
+msgid "Sorry an error has occurred."
+msgstr ""
+
+#: library/includes/ajax.php:779
+#@ musica
+msgid "You cannot vote twice."
+msgstr ""
+
+#: library/includes/ajax.php:832
+#: library/includes/ajax.php:833
+#@ musica
+msgid "Rated %.2f out of 5"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:167
+#@ musica
+msgid "Something went wrong."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:180
+#, php-format
+#@ musica
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:517
+#: library/includes/class-tgm-plugin-activation.php:2058
+#@ musica
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:545
+#, php-format
+#@ musica
+msgid "The following plugin was activated successfully: %s."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:704
+#@ musica
+msgid "Dismiss this notice"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1091
+#@ musica
+msgid "External Link"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1096
+#@ musica
+msgid "Private Repository"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1099
+#@ musica
+msgid "Pre-Packaged"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1103
+#@ musica
+msgid "WordPress Repository"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1106
+#@ musica
+msgid "Required"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1106
+#@ musica
+msgid "Recommended"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1109
+#@ musica
+msgid "Not Installed"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1111
+#@ musica
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1281
+#, php-format
+#@ musica
+msgid "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1297
+#@ musica
+msgid "Plugin"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1298
+#@ musica
+msgid "Source"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1299
+#@ musica
+msgid "Type"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1300
+#@ musica
+msgid "Status"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1318
+#@ musica
+msgid "Install"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1319
+#@ musica
+msgid "Activate"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1544
+#@ musica
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/includes/class-tgm-plugin-activation.php:1829
+#@ musica
+msgid "Install package not available."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1830
+#, php-format
+#@ musica
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1831
+#@ musica
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1832
+#@ musica
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1833
+#@ musica
+msgid "Plugin install failed."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1834
+#@ musica
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1845
+#@ musica
+msgid "Plugin activation failed."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1955
+#@ musica
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1956
+#, php-format
+#@ musica
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1956
+#: library/includes/class-tgm-plugin-activation.php:1965
+#@ musica
+msgid "Show Details"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1956
+#: library/includes/class-tgm-plugin-activation.php:1965
+#@ musica
+msgid "Hide Details"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1957
+#@ musica
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1958
+#, php-format
+#@ musica
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1962
+#@ musica
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1963
+#, php-format
+#@ musica
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1964
+#, php-format
+#@ musica
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1965
+#, php-format
+#@ musica
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1966
+#@ musica
+msgid "All installations have been completed."
+msgstr ""
+
+#: library/includes/class-tgm-plugin-activation.php:1967
+#, php-format
+#@ musica
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:4
+#@ musica
+msgid "Main Color"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:15
+#@ musica
+msgid "Body Text Color"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:25
+#@ musica
+msgid "Heading Color"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:29
+#@ musica
+msgid "Widget title color (sidebar)"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:33
+#@ musica
+msgid "Widget title color (content)"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:37
+#@ musica
+msgid "H1 Heading Color"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:41
+#@ musica
+msgid "H2 Heading Color"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:45
+#@ musica
+msgid "H3 Heading Color"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:49
+#@ musica
+msgid "H4 Heading Color"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:53
+#@ musica
+msgid "H5 Heading Color"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-color.php:57
+#@ musica
+msgid "H6 Heading Color"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-css.php:5
+#: library/includes/cpanel/theme-options.php:15
+#@ musica
+msgid "Custom CSS"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-css.php:10
+#@ musica
+msgid "Enter the your custom CSS code"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:4
+#@ musica
+msgid "Custom Fonts"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:8
+#@ musica
+msgid "Heading font"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:21
+#@ musica
+msgid "Sample Heading Font"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:35
+#: library/includes/cpanel/theme-options/custom-font.php:126
+#: library/includes/cpanel/theme-options/custom-font.php:164
+#: library/includes/cpanel/theme-options/custom-font.php:211
+#@ musica
+msgid "Font size"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:36
+#@ musica
+msgid "H1 size:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:38
+#: library/includes/cpanel/theme-options/custom-font.php:43
+#: library/includes/cpanel/theme-options/custom-font.php:48
+#: library/includes/cpanel/theme-options/custom-font.php:53
+#: library/includes/cpanel/theme-options/custom-font.php:58
+#: library/includes/cpanel/theme-options/custom-font.php:63
+#: library/includes/cpanel/theme-options/custom-font.php:129
+#: library/includes/cpanel/theme-options/custom-font.php:167
+#: library/includes/cpanel/theme-options/custom-font.php:214
+#: library/includes/cpanel/theme-options/general.php:21
+#: library/includes/cpanel/theme-options/general.php:27
+#: library/includes/cpanel/theme-options/general.php:33
+#: library/includes/cpanel/theme-options/general.php:39
+#@ musica
+msgid "px"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:41
+#@ musica
+msgid "H2 size:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:46
+#@ musica
+msgid "H3 size:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:51
+#@ musica
+msgid "H4 size:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:56
+#@ musica
+msgid "H5 size:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:61
+#@ musica
+msgid "H6 size:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:66
+#: library/includes/cpanel/theme-options/custom-font.php:171
+#@ musica
+msgid "Font Weight"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:67
+#@ musica
+msgid "H1 weight:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:71
+#@ musica
+msgid "H2 weight:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:75
+#@ musica
+msgid "H3 weight:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:79
+#@ musica
+msgid "H4 weight:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:83
+#@ musica
+msgid "H5 weight:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:87
+#@ musica
+msgid "H6 weight:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:100
+#@ musica
+msgid "Content font"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:112
+#@ musica
+msgid "Sample Content Font"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:127
+#@ musica
+msgid "Content font size:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:131
+#: library/includes/cpanel/theme-options/custom-font.php:218
+#@ musica
+msgid "Font weight"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:132
+#@ musica
+msgid "Content font weight:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:137
+#@ musica
+msgid "Main navigation font"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:149
+#@ musica
+msgid "Sample Main Navigation Font"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:165
+#@ musica
+msgid "Main nagivation size:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:172
+#@ musica
+msgid "Main nagivation font weight:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:184
+#@ musica
+msgid "Widget title font"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:196
+#@ musica
+msgid "Sample widget title font"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:212
+#@ musica
+msgid "Widget title font size:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/custom-font.php:219
+#@ musica
+msgid "Widget title font weight:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:6
+#@ musica
+msgid "Logo, Favicon, Apple Icon"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:12
+#@ musica
+msgid "Logo"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:13
+#: library/includes/cpanel/theme-options/general.php:50
+#@ musica
+msgid "Upload your own logo."
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:16
+#: library/includes/cpanel/theme-options/general.php:53
+#: library/includes/cpanel/theme-options/general.php:63
+#: library/includes/cpanel/theme-options/general.php:74
+#: library/includes/cpanel/theme-options/general.php:79
+#: library/includes/cpanel/theme-options/general.php:85
+#: library/includes/cpanel/theme-options/general.php:91
+#@ musica
+msgid "Upload"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:18
+#@ musica
+msgid "Logo margin"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:19
+#@ musica
+msgid "Top margin:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:25
+#@ musica
+msgid "Left margin:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:31
+#@ musica
+msgid "Right margin:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:37
+#@ musica
+msgid "Bottom margin:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:58
+#@ musica
+msgid "Favicon"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:60
+#@ musica
+msgid "Upload your own favicon."
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:69
+#@ musica
+msgid "Apple Icons"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:71
+#@ musica
+msgid "Iphone (57px - 57px)"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:76
+#@ musica
+msgid "Iphone Retina (114px - 114px)"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:82
+#@ musica
+msgid "Ipad (72px - 72px)"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:88
+#@ musica
+msgid "Ipad Retina (144px - 144px)"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:133
+#@ musica
+msgid "Header Weather"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:138
+#@ musica
+msgid "Display header weather:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:141
+#: library/includes/cpanel/theme-options/general.php:201
+#: library/includes/cpanel/theme-options/post.php:12
+#: library/includes/cpanel/theme-options/post.php:35
+#: library/includes/cpanel/theme-options/post.php:64
+#: library/includes/cpanel/theme-options/post.php:125
+#@ musica
+msgid "Show"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:142
+#: library/includes/cpanel/theme-options/general.php:202
+#: library/includes/cpanel/theme-options/post.php:13
+#: library/includes/cpanel/theme-options/post.php:36
+#: library/includes/cpanel/theme-options/post.php:65
+#: library/includes/cpanel/theme-options/post.php:126
+#@ musica
+msgid "Hide"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:159
+#@ musica
+msgid "Weather data:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:162
+#@ musica
+msgid "<strong>Automatic</strong> (Detect automatically by client IP)"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:163
+#@ musica
+msgid "<strong>Custom</strong> (Type your location below)"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:176
+#@ musica
+msgid "Your location search query (i.e: London,UK or New York City,NY)"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:182
+#@ musica
+msgid "Override Title"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:245
+#@ musica
+msgid "Footer"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:251
+#@ musica
+msgid "Custom Left Footer"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:252
+#@ musica
+msgid "Enter the content you want to display in your left footer (e.g. copyright text)."
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:257
+#@ musica
+msgid "Google Analytics"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:258
+#@ musica
+msgid "Enter Google Analytics code. This should be something like: &ltscript type=\"text/javascript\"&gt;  ...  &lt;/script&gt;"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:5
+#@ musica
+msgid "Featured Post Thumbnail"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:9
+#@ musica
+msgid "Show/Hide Featured Post Thumbnail"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:28
+#@ musica
+msgid "About Author"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:51
+#@ musica
+msgid "Sharing Buttons"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:58
+#@ musica
+msgid "Google"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:59
+#@ musica
+msgid "LinkedIn"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:60
+#@ musica
+msgid "Pinterest"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:61
+#@ musica
+msgid "Email"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:89
+#@ musica
+msgid "Related Posts"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:95
+#@ musica
+msgid "Get By"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:99
+#@ musica
+msgid "-- Hide --"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:100
+#@ musica
+msgid "Tag"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:101
+#@ musica
+msgid "Category"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:111
+#@ musica
+msgid "Limit"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:29
+#: library/includes/cpanel/theme-options.php:12
+#@ musica
+msgid "Social Links"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:36
+#@ musica
+msgid "RSS URL"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:37
+#@ musica
+msgid "Display the RSS feed button with the default RSS feed or enter a custom feed below. <br><code>Enter <b>\"HIDE\"</b> if you want to hide it</code>"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:43
+#@ musica
+msgid "Dribbble URL"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:49
+#@ musica
+msgid "Google Plus URL"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:55
+#@ musica
+msgid "Pinterest URL"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:61
+#@ musica
+msgid "Facebook_URL"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:67
+#@ musica
+msgid "Twitter URL"
+msgstr ""
+
+#: library/includes/cpanel/theme-options.php:10
+#@ musica
+msgid "General Setting"
+msgstr ""
+
+#: library/includes/cpanel/theme-options.php:11
+#@ musica
+msgid "Single Post"
+msgstr ""
+
+#: library/includes/cpanel/theme-options.php:13
+#@ musica
+msgid "Custom Color"
+msgstr ""
+
+#: library/includes/cpanel/theme-options.php:14
+#@ musica
+msgid "Custom Font"
+msgstr ""
+
+#: library/includes/cpanel/theme-options.php:22
+#: library/kopa.php:26
+#@ musica
+msgid "Theme Options"
+msgstr ""
+
+#: library/includes/cpanel/theme-options.php:26
+#@ musica
+msgid "Visit author URL:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options.php:33
+#: library/includes/cpanel/theme-options.php:52
+#@ musica
+msgid "Save"
+msgstr ""
+
+#: library/includes/widgets.php:157
+#@ musica
+msgid "Arbitrary text, HTML or shortcodes"
+msgstr ""
+
+#: library/includes/widgets.php:159
+#@ musica
+msgid "Kopa Text"
+msgstr ""
+
+#: library/includes/widgets.php:195
+#: library/includes/widgets.php:331
+#: library/includes/widgets.php:615
+#: library/includes/widgets.php:837
+#: library/includes/widgets.php:1092
+#: library/includes/widgets.php:1218
+#: library/includes/widgets.php:1294
+#: library/includes/widgets.php:1411
+#: library/includes/widgets.php:1557
+#: library/includes/widgets.php:1733
+#: library/includes/widgets.php:1869
+#: library/includes/widgets.php:2097
+#: library/includes/widgets.php:2288
+#: library/includes/widgets.php:2432
+#: library/includes/widgets.php:2519
+#@ musica
+msgid "Title:"
+msgstr ""
+
+#: library/includes/widgets.php:229
+#@ musica
+msgid "Automatically add paragraphs"
+msgstr ""
+
+#: library/includes/widgets.php:242
+#@ musica
+msgid "A Posts Slider Widget"
+msgstr ""
+
+#: library/includes/widgets.php:244
+#@ musica
+msgid "Kopa Flexslider"
+msgstr ""
+
+#: library/includes/widgets.php:336
+#: library/includes/widgets.php:619
+#: library/includes/widgets.php:841
+#: library/includes/widgets.php:1096
+#: library/includes/widgets.php:1415
+#: library/includes/widgets.php:1561
+#: library/includes/widgets.php:1737
+#: library/includes/widgets.php:1873
+#: library/includes/widgets.php:2101
+#: library/includes/widgets.php:2292
+#@ musica
+msgid "Categories:"
+msgstr ""
+
+#: library/includes/widgets.php:338
+#: library/includes/widgets.php:365
+#: library/includes/widgets.php:621
+#: library/includes/widgets.php:648
+#: library/includes/widgets.php:843
+#: library/includes/widgets.php:870
+#: library/includes/widgets.php:1098
+#: library/includes/widgets.php:1125
+#: library/includes/widgets.php:1417
+#: library/includes/widgets.php:1563
+#: library/includes/widgets.php:1739
+#: library/includes/widgets.php:1875
+#: library/includes/widgets.php:1902
+#: library/includes/widgets.php:2103
+#: library/includes/widgets.php:2130
+#: library/includes/widgets.php:2294
+#: library/includes/widgets.php:2321
+#: library/ini.php:265
+#@ musica
+msgid "-- None --"
+msgstr ""
+
+#: library/includes/widgets.php:349
+#: library/includes/widgets.php:632
+#: library/includes/widgets.php:854
+#: library/includes/widgets.php:1109
+#: library/includes/widgets.php:1886
+#: library/includes/widgets.php:2114
+#: library/includes/widgets.php:2305
+#@ musica
+msgid "Relation:"
+msgstr ""
+
+#: library/includes/widgets.php:353
+#: library/includes/widgets.php:636
+#: library/includes/widgets.php:858
+#: library/includes/widgets.php:1113
+#: library/includes/widgets.php:1890
+#: library/includes/widgets.php:2118
+#: library/includes/widgets.php:2309
+#@ musica
+msgid "And"
+msgstr ""
+
+#: library/includes/widgets.php:354
+#: library/includes/widgets.php:637
+#: library/includes/widgets.php:859
+#: library/includes/widgets.php:1114
+#: library/includes/widgets.php:1891
+#: library/includes/widgets.php:2119
+#: library/includes/widgets.php:2310
+#@ musica
+msgid "Or"
+msgstr ""
+
+#: library/includes/widgets.php:363
+#: library/includes/widgets.php:646
+#: library/includes/widgets.php:868
+#: library/includes/widgets.php:1123
+#: library/includes/widgets.php:1900
+#: library/includes/widgets.php:2128
+#: library/includes/widgets.php:2319
+#@ musica
+msgid "Tags:"
+msgstr ""
+
+#: library/includes/widgets.php:375
+#: library/includes/widgets.php:658
+#: library/includes/widgets.php:880
+#: library/includes/widgets.php:1135
+#: library/includes/widgets.php:1912
+#: library/includes/widgets.php:2140
+#@ musica
+msgid "Number of article:"
+msgstr ""
+
+#: library/includes/widgets.php:379
+#: library/includes/widgets.php:662
+#: library/includes/widgets.php:884
+#: library/includes/widgets.php:1139
+#: library/includes/widgets.php:1578
+#: library/includes/widgets.php:1754
+#: library/includes/widgets.php:1916
+#: library/includes/widgets.php:2144
+#: library/includes/widgets.php:2340
+#@ musica
+msgid "Orderby:"
+msgstr ""
+
+#: library/includes/widgets.php:384
+#: library/includes/widgets.php:667
+#: library/includes/widgets.php:889
+#: library/includes/widgets.php:1144
+#: library/includes/widgets.php:1583
+#: library/includes/widgets.php:1759
+#: library/includes/widgets.php:1921
+#: library/includes/widgets.php:2149
+#: library/includes/widgets.php:2345
+#@ musica
+msgid "Popular by View Count"
+msgstr ""
+
+#: library/includes/widgets.php:385
+#: library/includes/widgets.php:668
+#: library/includes/widgets.php:890
+#: library/includes/widgets.php:1145
+#: library/includes/widgets.php:1584
+#: library/includes/widgets.php:1760
+#: library/includes/widgets.php:1922
+#: library/includes/widgets.php:2150
+#: library/includes/widgets.php:2346
+#@ musica
+msgid "Popular by Comment Count"
+msgstr ""
+
+#: library/includes/widgets.php:386
+#: library/includes/widgets.php:669
+#: library/includes/widgets.php:891
+#: library/includes/widgets.php:1146
+#: library/includes/widgets.php:1585
+#: library/includes/widgets.php:1761
+#: library/includes/widgets.php:1923
+#: library/includes/widgets.php:2151
+#: library/includes/widgets.php:2347
+#@ musica
+msgid "Random"
+msgstr ""
+
+#: library/includes/widgets.php:397
+#@ musica
+msgid "Animation:"
+msgstr ""
+
+#: library/includes/widgets.php:401
+#@ musica
+msgid "Slide"
+msgstr ""
+
+#: library/includes/widgets.php:402
+#@ musica
+msgid "Fade"
+msgstr ""
+
+#: library/includes/widgets.php:412
+#@ musica
+msgid "Direction:"
+msgstr ""
+
+#: library/includes/widgets.php:416
+#@ musica
+msgid "Horizontal"
+msgstr ""
+
+#: library/includes/widgets.php:417
+#@ musica
+msgid "Vertical"
+msgstr ""
+
+#: library/includes/widgets.php:427
+#@ musica
+msgid "Speed of the slideshow cycling:"
+msgstr ""
+
+#: library/includes/widgets.php:432
+#@ musica
+msgid "Speed of animations:"
+msgstr ""
+
+#: library/includes/widgets.php:438
+#: library/includes/widgets.php:917
+#@ musica
+msgid "Auto Play"
+msgstr ""
+
+#: library/includes/widgets.php:474
+#@ musica
+msgid "Kopa Articles List"
+msgstr ""
+
+#: library/templates/format-index-audio.php:23
+#: library/templates/format-index-gallery.php:28
+#: library/templates/format-index-video.php:33
+#: library/templates/format-index.php:18
+#@ musica
+msgid "Read more"
+msgstr ""
+
+#: library/includes/widgets.php:704
+#@ musica
+msgid "Display Articles Carousel Widget"
+msgstr ""
+
+#: library/includes/widgets.php:706
+#@ musica
+msgid "Kopa Articles Carousel"
+msgstr ""
+
+#: library/includes/widgets.php:903
+#@ musica
+msgid "Scroll Items:"
+msgstr ""
+
+#: library/includes/widgets.php:965
+#@ musica
+msgid "Display Featured Articles Widget"
+msgstr ""
+
+#: library/includes/widgets.php:967
+#@ musica
+msgid "Kopa Entry List"
+msgstr ""
+
+#: library/includes/widgets.php:1181
+#@ musica
+msgid "Display your latest twitter status"
+msgstr ""
+
+#: library/includes/widgets.php:1183
+#@ musica
+msgid "Kopa Twitter"
+msgstr ""
+
+#: library/includes/widgets.php:1222
+#@ musica
+msgid "Twitter Username:"
+msgstr ""
+
+#: library/includes/widgets.php:1226
+#@ musica
+msgid "Number of tweets:"
+msgstr ""
+
+#: library/includes/widgets.php:1253
+#@ musica
+msgid "Display one advertising image"
+msgstr ""
+
+#: library/includes/widgets.php:1255
+#@ musica
+msgid "Kopa Advertising"
+msgstr ""
+
+#: library/includes/widgets.php:1298
+#@ musica
+msgid "Image Source:"
+msgstr ""
+
+#: library/includes/widgets.php:1302
+#@ musica
+msgid "Url:"
+msgstr ""
+
+#: library/includes/widgets.php:1326
+#@ musica
+msgid "Kopa Gallery"
+msgstr ""
+
+#: library/includes/widgets.php:1446
+#@ musica
+msgid "Display tabs of posts for each selected categories"
+msgstr ""
+
+#: library/includes/widgets.php:1448
+#@ musica
+msgid "Kopa Articles Tabs List"
+msgstr ""
+
+#: library/includes/widgets.php:1544
+#@ musica
+msgid "Trending Now"
+msgstr ""
+
+#: library/includes/widgets.php:1574
+#@ musica
+msgid "Number of articles on each tab:"
+msgstr ""
+
+#: library/includes/widgets.php:1618
+#@ musica
+msgid "Display audio format posts"
+msgstr ""
+
+#: library/includes/widgets.php:1620
+#@ musica
+msgid "Kopa Audios"
+msgstr ""
+
+#: library/includes/widgets.php:1720
+#@ musica
+msgid "Audio"
+msgstr ""
+
+#: library/includes/widgets.php:1750
+#@ musica
+msgid "Number of articles:"
+msgstr ""
+
+#: library/includes/widgets.php:1791
+#@ musica
+msgid "Kopa Articles List 2"
+msgstr ""
+
+#: library/includes/widgets.php:1960
+#@ musica
+msgid "Kopa Entry List 2"
+msgstr ""
+
+#: library/ini.php:54
+#@ musica
+msgid "Page Right Sidebar"
+msgstr ""
+
+#: library/ini.php:65
+#@ musica
+msgid "Page Fullwidth"
+msgstr ""
+
+#: library/ini.php:75
+#@ musica
+msgid "Single Right Sidebar"
+msgstr ""
+
+#: library/ini.php:86
+#@ musica
+msgid "404 Page"
+msgstr ""
+
+#: library/ini.php:98
+#@ musica
+msgid "Widget Area 1"
+msgstr ""
+
+#: library/ini.php:99
+#@ musica
+msgid "Widget Area 2"
+msgstr ""
+
+#: library/ini.php:100
+#@ musica
+msgid "Widget Area 3"
+msgstr ""
+
+#: library/ini.php:101
+#@ musica
+msgid "Widget Area 4"
+msgstr ""
+
+#: library/ini.php:102
+#@ musica
+msgid "Widget Area 5"
+msgstr ""
+
+#: library/ini.php:103
+#@ musica
+msgid "Widget Area 6"
+msgstr ""
+
+#: library/ini.php:104
+#@ musica
+msgid "Widget Area 7"
+msgstr ""
+
+#: library/ini.php:105
+#@ musica
+msgid "Widget Area 8"
+msgstr ""
+
+#: library/ini.php:106
+#@ musica
+msgid "Widget Area 9"
+msgstr ""
+
+#: library/ini.php:107
+#@ musica
+msgid "Widget Area 10"
+msgstr ""
+
+#: library/ini.php:108
+#@ musica
+msgid "Widget Area 11"
+msgstr ""
+
+#: library/ini.php:109
+#@ musica
+msgid "Widget Area 12"
+msgstr ""
+
+#: library/ini.php:110
+#@ musica
+msgid "Widget Area 13"
+msgstr ""
+
+#: library/ini.php:126
+#@ musica
+msgid "Front Page"
+msgstr ""
+
+#: library/ini.php:130
+#@ musica
+msgid "Post"
+msgstr ""
+
+#: library/ini.php:134
+#@ musica
+msgid "Page"
+msgstr ""
+
+#: library/ini.php:138
+#@ musica
+msgid "Taxonomy"
+msgstr ""
+
+#: library/ini.php:142
+#@ musica
+msgid "Search"
+msgstr ""
+
+#: library/ini.php:146
+#@ musica
+msgid "Archive"
+msgstr ""
+
+#: library/ini.php:266
+#@ musica
+msgid "Sidebar 1"
+msgstr ""
+
+#: library/ini.php:267
+#@ musica
+msgid "Sidebar 2"
+msgstr ""
+
+#: library/ini.php:268
+#@ musica
+msgid "Sidebar 3"
+msgstr ""
+
+#: library/ini.php:269
+#@ musica
+msgid "Sidebar 4"
+msgstr ""
+
+#: library/ini.php:270
+#@ musica
+msgid "Sidebar 5"
+msgstr ""
+
+#: library/ini.php:271
+#@ musica
+msgid "Sidebar 6"
+msgstr ""
+
+#: library/ini.php:272
+#@ musica
+msgid "Sidebar 7"
+msgstr ""
+
+#: library/ini.php:273
+#@ musica
+msgid "Sidebar 8"
+msgstr ""
+
+#: library/ini.php:274
+#@ musica
+msgid "Sidebar 9"
+msgstr ""
+
+#: library/ini.php:275
+#@ musica
+msgid "Sidebar 10"
+msgstr ""
+
+#: library/ini.php:276
+#@ musica
+msgid "Sidebar 11"
+msgstr ""
+
+#: library/ini.php:277
+#@ musica
+msgid "Sidebar 12"
+msgstr ""
+
+#: library/ini.php:278
+#@ musica
+msgid "Sidebar 13"
+msgstr ""
+
+#: library/kopa.php:33
+#@ musica
+msgid "Sidebar Manager"
+msgstr ""
+
+#: library/kopa.php:40
+#@ musica
+msgid "Layout Manager"
+msgstr ""
+
+#: library/templates/format-single-audio.php:36
+#: library/templates/format-single-gallery.php:35
+#: library/templates/format-single-video.php:37
+#: library/templates/format-single.php:25
+#@ musica
+msgid "Tagged with:"
+msgstr ""
+
+#: library/templates/loop-single.php:17
+#@ musica
+msgid "View all contributions by"
+msgstr ""
+
+#: library/templates/loop-single.php:32
+#@ musica
+msgid "Social links:"
+msgstr ""
+
+#: library/templates/template-pagination.php:19
+#@ musica
+msgid "Previous"
+msgstr ""
+
+#: library/templates/template-pagination.php:20
+#@ musica
+msgid "Next"
+msgstr ""
+
+#: library/templates/template-post-navigation.php:14
+#@ musica
+msgid "Next Article"
+msgstr ""
+
+#: searchform.php:4
+#@ musica
+msgid "Enter keyworks"
+msgstr ""
+
+#: library/front.php:276
+#@ musica
+msgid "Submit"
+msgstr ""
+
+#: library/front.php:277
+#@ musica
+msgid "Sending..."
+msgstr ""
+
+#: library/front.php:280
+#@ musica
+msgid "Please enter your name."
+msgstr ""
+
+#: library/front.php:281
+#: library/front.php:293
+#@ musica
+msgid "At least {0} characters required."
+msgstr ""
+
+#: library/front.php:284
+#@ musica
+msgid "Please enter your email."
+msgstr ""
+
+#: library/front.php:285
+#@ musica
+msgid "Please enter a valid email."
+msgstr ""
+
+#: library/front.php:288
+#@ musica
+msgid "Please enter your url."
+msgstr ""
+
+#: library/front.php:289
+#@ musica
+msgid "Please enter a valid url."
+msgstr ""
+
+#: library/front.php:292
+#@ musica
+msgid "Please enter a message."
+msgstr ""
+
+#: library/includes/widgets.php:383
+#: library/includes/widgets.php:666
+#: library/includes/widgets.php:888
+#: library/includes/widgets.php:1143
+#: library/includes/widgets.php:1582
+#: library/includes/widgets.php:1758
+#: library/includes/widgets.php:1920
+#: library/includes/widgets.php:2148
+#: library/includes/widgets.php:2344
+#@ musica
+msgid "Latest"
+msgstr ""
+
+#: library/includes/widgets.php:472
+#: library/includes/widgets.php:1789
+#@ musica
+msgid "Display Latest Articles Widget"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:118
+#@ musica
+msgid "Facebook Comments"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:122
+#@ musica
+msgid "Show/Hide Facebook Comments"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:138
+#@ musica
+msgid "Language:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:142
+#@ musica
+msgid "App ID:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:143
+#@ musica
+msgid "To setup Moderation, enter your"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:143
+#@ musica
+msgid "Facebook Application ID"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:143
+#@ musica
+msgid "below"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:148
+#@ musica
+msgid "Number of posts:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:153
+#@ musica
+msgid "Color Scheme:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:157
+#@ musica
+msgid "Light"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/post.php:158
+#@ musica
+msgid "Dark"
+msgstr ""
+
+#: library/templates/template-post-navigation.php:5
+#@ musica
+msgid "Previous Article"
+msgstr ""
+
+#: searchform.php:5
+#@ musica
+msgid "Go"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:48
+#@ musica
+msgid "Footer logo"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:105
+#@ musica
+msgid "Responsive layout"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:109
+#@ musica
+msgid "Enable/Disable Responsive Layout:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:112
+#: library/includes/cpanel/theme-options/general.php:229
+#@ musica
+msgid "Enable"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:113
+#: library/includes/cpanel/theme-options/general.php:230
+#@ musica
+msgid "Disable"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:155
+#@ musica
+msgid "Title"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:194
+#@ musica
+msgid "Breadcrumb"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:198
+#@ musica
+msgid "Show/Hide Breadcrumb:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:222
+#@ musica
+msgid "Home Menu Item"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/general.php:226
+#@ musica
+msgid "Add home menu item as first item on main menu:"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:5
+#: library/includes/cpanel/theme-options/social-links.php:10
+#@ musica
+msgid "Social Links Target"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:13
+#@ musica
+msgid "Opens the linked document in the same frame as it was clicked"
+msgstr ""
+
+#: library/includes/cpanel/theme-options/social-links.php:14
+#@ musica
+msgid "Opens the linked document in a new window or tab"
+msgstr ""
+
+#: library/includes/widgets.php:809
+#@ musica
+msgid "News"
+msgstr ""
+
+#: library/includes/widgets.php:907
+#@ musica
+msgid "Number of Columns:"
+msgstr ""
+
+#: library/includes/widgets.php:920
+#@ musica
+msgid "Duration of the transition (milliseconds):"
+msgstr ""
+
+#: library/includes/widgets.php:924
+#@ musica
+msgid "The amount of milliseconds the carousel will pause:"
+msgstr ""
+
+#: library/includes/widgets.php:1324
+#@ musica
+msgid "Display latest gallery of selected categories"
+msgstr ""
+
+#: library/includes/widgets.php:1958
+#@ musica
+msgid "Display Latest Articles Widget with Masonry Style"
+msgstr ""
+
+#: library/includes/widgets.php:2182
+#@ musica
+msgid "Display Featured News Slider Widget"
+msgstr ""
+
+#: library/includes/widgets.php:2184
+#@ musica
+msgid "Kopa Featured News"
+msgstr ""
+
+#: library/includes/widgets.php:2331
+#@ musica
+msgid "Number of Articles:"
+msgstr ""
+
+#: library/includes/widgets.php:2382
+#@ musica
+msgid "Display mailchimp newsletter subscription form"
+msgstr ""
+
+#: library/includes/widgets.php:2384
+#@ musica
+msgid "Kopa Mailchimp Subscribe"
+msgstr ""
+
+#: library/includes/widgets.php:2406
+#: library/includes/widgets.php:2493
+#@ musica
+msgid "Subscribe to newsletter..."
+msgstr ""
+
+#: library/includes/widgets.php:2407
+#: library/includes/widgets.php:2494
+#@ musica
+msgid "Subscribe"
+msgstr ""
+
+#: library/includes/widgets.php:2436
+#@ musica
+msgid "Mailchimp Form Action:"
+msgstr ""
+
+#: library/includes/widgets.php:2441
+#@ musica
+msgid "Enable <strong>evil</strong> popup mode"
+msgstr ""
+
+#: library/includes/widgets.php:2444
+#: library/includes/widgets.php:2527
+#@ musica
+msgid "Description"
+msgstr ""
+
+#: library/includes/widgets.php:2467
+#@ musica
+msgid "Display Feedburner subscription form"
+msgstr ""
+
+#: library/includes/widgets.php:2469
+#@ musica
+msgid "Kopa Feedburner Subscribe"
+msgstr ""
+
+#: library/includes/widgets.php:2523
+#@ musica
+msgid "Feedburner ID (http://feeds.feedburner.com/<strong>wordpress/kopatheme</strong>):"
+msgstr ""
+
+#: library/ini.php:28
+#@ musica
+msgid "Blog 1"
+msgstr ""
+
+#: library/ini.php:41
+#@ musica
+msgid "Blog 2"
+msgstr ""
+
+#: library/ini.php:111
+#@ musica
+msgid "Widget Area 14"
+msgstr ""
+
+#: library/ini.php:112
+#@ musica
+msgid "Widget Area 15"
+msgstr ""
+
+#: library/ini.php:113
+#@ musica
+msgid "Widget Area 16"
+msgstr ""
+
+#: library/ini.php:114
+#@ musica
+msgid "Widget Area 17"
+msgstr ""
+
+#: library/ini.php:115
+#@ musica
+msgid "Widget Area 18"
+msgstr ""
+
+#: library/ini.php:116
+#@ musica
+msgid "Widget Area 19"
+msgstr ""
+
+#: library/ini.php:117
+#@ musica
+msgid "Widget Area 20"
+msgstr ""
+
+#: library/ini.php:279
+#@ musica
+msgid "Sidebar 14"
+msgstr ""
+
+#: library/ini.php:280
+#@ musica
+msgid "Sidebar 15"
+msgstr ""
+
+#: library/ini.php:281
+#@ musica
+msgid "Sidebar 16"
+msgstr ""
+
+#: library/ini.php:282
+#@ musica
+msgid "Sidebar 17"
+msgstr ""
+
+#: library/ini.php:283
+#@ musica
+msgid "Sidebar 18"
+msgstr ""
+
+#: library/ini.php:284
+#@ musica
+msgid "Sidebar 19"
+msgstr ""
+
+#: library/ini.php:285
+#@ musica
+msgid "Sidebar 20"
+msgstr ""
+
+#: library/templates/format-single-audio.php:44
+#: library/templates/format-single-gallery.php:43
+#: library/templates/format-single-video.php:45
+#: library/templates/format-single.php:33
+#: library/templates/loop-page.php:13
+#@ musica
+msgid "Pages:"
+msgstr ""
+
+#: library/templates/format-single-audio.php:46
+#: library/templates/format-single-gallery.php:45
+#: library/templates/format-single-video.php:47
+#: library/templates/format-single.php:35
+#: library/templates/loop-page.php:15
+#@ musica
+msgid "%"
+msgstr ""
+
+#: functions.php:52
+#, php-format
+#@ musica
+msgid "This theme requires the following plugin: %1$s. If you currently use the built-in plugin (pre-packaged plugin, e.g. shortcode...) from another WordPress themes by Kopatheme, please deactivate and delete the plugin before installing."
+msgid_plural "This theme requires the following plugins: %1$s. If you currently use the built-in plugins (pre-packaged plugins, e.g. shortcode...) from another WordPress themes by Kopatheme, please deactivate and delete the plugins before installing."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:53
+#, php-format
+#@ musica
+msgid "This theme recommends the following plugin: %1$s. If you currently use the built-in plugin (pre-packaged plugin, e.g. shortcode...) from another WordPress themes by Kopatheme, please deactivate and delete the plugin before installing."
+msgid_plural "This theme recommends the following plugins: %1$s. If you currently use the built-in plugins (pre-packaged plugins, e.g. shortcode...) from another WordPress themes by Kopatheme, please deactivate and delete the plugins before installing."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:55
+#, php-format
+#@ musica
+msgid "The following required plugin is currently inactive: %1$s. If you currently use the built-in plugin (pre-packaged plugin, e.g. shortcode...) from another WordPress themes by Kopatheme, please delete the plugin and install the pre-packaged plugin comes with this theme."
+msgid_plural "The following required plugins are currently inactive: %1$s. If you currently use the built-in plugins (pre-packaged plugins, e.g. shortcode...) from another WordPress themes by Kopatheme, please delete the plugins and install the pre-packaged plugins come with this theme."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:56
+#, php-format
+#@ musica
+msgid "The following recommended plugin is currently inactive: %1$s. If you currently use the built-in plugin (pre-packaged plugin, e.g. shortcode...) from another WordPress themes by Kopatheme, please delete the plugin and install the pre-packaged plugin comes with this theme."
+msgid_plural "The following recommended plugins are currently inactive: %1$s. If you currently use the built-in plugins (pre-packaged plugins, e.g. shortcode...) from another WordPress themes by Kopatheme, please delete the plugins and install the pre-packaged plugins come with this theme."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:58
+#, php-format
+#@ musica
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s. If the plugin is built-in plugin (pre-packaged plugin, e.g. shortcode...) of this theme, please deactivate and delete its current version before installing its latest version comes with this theme."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s. If the plugins are built-in plugins (pre-packaged plugins, e.g. shortcode...) of this theme, please deactivate and delete their current version before installing their latest version come with this theme."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/includes/upsell/themes-introduction.php:100
+#, php-format
+#@ musica
+msgid "Copyrights. &copy; %s by KOPASOFT"
+msgstr ""
+
+#: library/includes/upsell/upsell.php:15
+#@ musica
+msgid "Kopatheme - Premium WordPress Themes and Web Templates"
+msgstr ""
+
+#: library/includes/upsell/upsell.php:15
+#@ musica
+msgid "Kopatheme Premium Templates"
+msgstr ""
+
+#: library/includes/upsell/upsell.php:53
+#@ musica
+msgid "Hide This Notice"
+msgstr ""
+
+#: footer.php:15
+#: library/includes/cpanel/theme-options/general.php:253
+#, php-format
+#@ musica
+msgid "Copyright %1$s - Kopasoft. All Rights Reserved."
+msgstr ""
+
