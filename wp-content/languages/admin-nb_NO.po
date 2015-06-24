@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-05-04 08:01:04+0000\n"
+"PO-Revision-Date: 2015-06-23 18:44:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -694,6 +694,11 @@ msgstr "Bokmerkeskript"
 msgid "If you can&#8217;t drag the bookmarklet to your bookmarks, copy the following code and create a new bookmark. Paste the code into the new bookmark&#8217;s URL field."
 msgstr "Hvis du ikke kan dra bokmerkeskriptet til dine bokmerker, kopier følgende kode og lag et nytt bokmerke. Lim inn koden i det nye bokmerkets URL-felt."
 
+#: wp-admin/includes/class-wp-press-this.php:1106
+msgctxt "Used in Press This to indicate where the content comes from."
+msgid "Source:"
+msgstr "Kilde:"
+
 #: wp-admin/includes/class-wp-press-this.php:1342
 msgid "Suggested media"
 msgstr "Anbefalt medie"
@@ -802,11 +807,6 @@ msgstr "Savner innleggs-ID."
 #: wp-admin/includes/class-wp-press-this.php:1206
 msgid "Press This!"
 msgstr "Skriv om dette!"
-
-#: wp-admin/includes/class-wp-press-this.php:1106
-msgctxt "Used in Press This to indicate where the content comes from."
-msgid "Source:"
-msgstr "Kildekode:"
 
 #: wp-admin/includes/class-wp-press-this.php:283
 #: wp-admin/includes/class-wp-press-this.php:285
@@ -7256,10 +7256,6 @@ msgstr "Reparer database"
 msgid "Repair and Optimize Database"
 msgstr "Reparer og optimaliser database"
 
-#: wp-admin/media-new.php:40
-msgid "Upload New Media"
-msgstr "Last opp nytt media"
-
 #: wp-admin/media.php:23 wp-admin/media.php:57
 msgid "You are not allowed to edit this attachment."
 msgstr "Du har ikke lov til å redigere dette vedlegget."
@@ -8458,6 +8454,10 @@ msgstr "Legg til ny"
 #: wp-admin/options-media.php:88
 msgid "Embeds"
 msgstr "Innbygginger"
+
+#: wp-admin/media-new.php:40
+msgid "Upload New Media"
+msgstr "Last opp ny media"
 
 #: wp-admin/includes/update.php:428
 msgid "An automated WordPress update has failed to complete - <a href=\"%s\">please attempt the update again now</a>."
