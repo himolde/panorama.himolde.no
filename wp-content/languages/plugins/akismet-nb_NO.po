@@ -2,13 +2,29 @@
 # This file is distributed under the same license as the Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-05-06 09:54:05+0000\n"
+"PO-Revision-Date: 2015-05-10 18:23:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/1.0-alpha-1000\n"
 "Project-Id-Version: Development\n"
+
+#: views/notice.php:81 views/notice.php:104 views/notice.php:111
+msgid "Please <a href=\"%s\" target=\"_blank\">contact our support team</a> with any questions."
+msgstr "Vennligst <a href=\"%s\" target=\"_blank\">kontakt vårt support-team</a> hvis du har noen spørsmål."
+
+#: views/notice.php:102
+msgid "Your Pro subscription allows the use of Akismet on only one site. Please <a href=\"%s\" target=\"_blank\">purchase additional Pro subscriptions</a> or upgrade to an Enterprise subscription that allows the use of Akismet on unlimited sites."
+msgstr "Ditt Pro-abonnement lar deg kun bruke Akismet på ett nettsted. Vennligst <a href=\"%s\" target=\"_blank\">kjøp flere Pro-abonnementer</a> eller oppgrader til et Enterprise-abonnement som lar deg bruke Akismet på et ubegrenset antall nettsteder."
+
+#: views/notice.php:109
+msgid "To continue your service, <a href=\"%s\" target=\"_blank\">upgrade to an Enterprise subscription</a>, which covers an unlimited number of sites."
+msgstr "For å fortsette med tjenesten, <a href=\"%s\" target=\"_blank\">oppgrader til et enterprise-abonnement</a>, som er gyldig for et ubegrenset antall nettsteder."
+
+#: views/notice.php:79
+msgid "Since 2012, Akismet began using subscriptions for all accounts (even free ones). It looks like a subscription has not been assigned to your account, and we’d appreciate it if you’d <a href=\"%s\" target=\"_blank\">sign into your account</a> and choose one."
+msgstr "Siden 2012, har Akismet brukt abonnementer for alle kontoer (også gratis-kontoer). Det ser ut til at et abonnement ikke har blitt tildelt din konto, og vi setter pris på om du vil <a href=\"%s\" target=\"_blank\">logge inn i din konto</a> og velge et."
 
 #: class.akismet-admin.php:515
 msgid "Akismet caught this comment as spam."
@@ -192,6 +208,14 @@ msgstr "Kommentarer"
 msgid "Your subscription is missing."
 msgstr "Ditt abonnement mangler."
 
+#: views/notice.php:107
+msgid "You&#8217;re using Akismet on far too many sites for your Pro subscription."
+msgstr "Du bruker Akismet på altfor mange nettsteder for ditt Pro-abonnement."
+
+#: views/notice.php:100
+msgid "You&#8217;re using your Akismet key on more sites than your Pro subscription allows."
+msgstr "Du bruker din Akismet-nøkkel på flere nettsteder enn ditt Pro-abonnement tillater."
+
 #: views/notice.php:86
 msgid "Your Akismet account has been successfully set up and activated. Happy blogging!"
 msgstr "Din Akismet-konto har blitt opprettet og aktivert. God blogging!"
@@ -337,10 +361,6 @@ msgstr "Ditt abonnement på %s er suspendert"
 #: views/notice.php:11
 msgid "Activate your Akismet account"
 msgstr "Aktiver din Akismet-konto"
-
-#: views/notice.php:14
-msgid "<strong>Almost done</strong> - activate your account and say goodbye to comment spam"
-msgstr "<strong>Nesten ferdig</strong> - Akriver din konto og si farvel til useriøse kommentarer"
 
 #: views/config.php:109
 msgid "Show approved comments"
@@ -497,6 +517,10 @@ msgstr "Merk:"
 #: views/config.php:28
 msgid "Accuracy"
 msgstr "Treffsikkerhet"
+
+#: views/notice.php:14
+msgid "<strong>Almost done</strong> - activate your account and say goodbye to comment spam"
+msgstr "<strong>Nesten ferdig</strong> – aktiver din konto og si farvel til useriøse kommentarer"
 
 #: class.akismet-admin.php:206 views/config.php:170
 msgid "Subscription Type"
