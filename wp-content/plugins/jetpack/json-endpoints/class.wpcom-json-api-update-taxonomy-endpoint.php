@@ -43,16 +43,19 @@ class WPCOM_JSON_API_Update_Taxonomy_Endpoint extends WPCOM_JSON_API_Taxonomy_En
 			return new WP_Error( 'unauthorized', 'User cannot edit taxonomy', 403 );
 		}
 
-		if ( term_exists( $input['name'], $taxonomy_type ) ) {
-			return new WP_Error( 'duplicate', 'A taxonomy with that name already exists', 400 );
-		}
-
-		if ( 'category' !== $taxonomy_type )
+		if ( 'category' !== $taxonomy_type || ! isset( $input['parent'] ) )
 			$input['parent'] = 0;
+
+		if ( $term = get_term_by( 'name', $input['name'], $taxonomy_type ) ) {
+			// the same name is allowed as long as the parents are different
+			if ( $input['parent'] === $term->parent ) {
+				return new WP_Error( 'duplicate', 'A taxonomy with that name already exists', 400 );
+			}
+		}
 
 		$data = wp_insert_term( addslashes( $input['name'] ), $taxonomy_type,
 			array(
-		  		'description' => addslashes( $input['description'] ),
+		  		'description' => isset( $input['description'] ) ? addslashes( $input['description'] ) : '',
 		  		'parent'      => $input['parent']
 			)
 		);
@@ -67,6 +70,7 @@ class WPCOM_JSON_API_Update_Taxonomy_Endpoint extends WPCOM_JSON_API_Taxonomy_En
 			return $return;
 		}
 
+		/** This action is documented in json-endpoints/class.wpcom-json-api-site-settings-endpoint.php */
 		do_action( 'wpcom_json_api_objects', 'taxonomies' );
 		return $return;
 	}
@@ -111,6 +115,7 @@ class WPCOM_JSON_API_Update_Taxonomy_Endpoint extends WPCOM_JSON_API_Taxonomy_En
 			return $return;
 		}
 
+		/** This action is documented in json-endpoints/class.wpcom-json-api-site-settings-endpoint.php */
 		do_action( 'wpcom_json_api_objects', 'taxonomies' );
 		return $return;
 	}
@@ -136,6 +141,7 @@ class WPCOM_JSON_API_Update_Taxonomy_Endpoint extends WPCOM_JSON_API_Taxonomy_En
 			return $return;
 		}
 
+		/** This action is documented in json-endpoints/class.wpcom-json-api-site-settings-endpoint.php */
 		do_action( 'wpcom_json_api_objects', 'taxonomies' );
 
 		wp_delete_term( $taxonomy->term_id, $taxonomy_type );

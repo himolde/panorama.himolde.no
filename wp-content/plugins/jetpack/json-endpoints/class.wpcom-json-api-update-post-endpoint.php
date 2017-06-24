@@ -89,6 +89,10 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 				return new WP_Error( 'invalid_input', 'Invalid request input', 400 );
 			}
 
+			if ( isset( $input['status'] ) && 'trash' === $input['status'] && ! current_user_can( 'delete_post', $post_id ) ) {
+				return new WP_Error( 'unauthorized', 'User cannot delete post', 403 );
+			}
+
 			$post = get_post( $post_id );
 			$_post_type = ( ! empty( $input['type'] ) ) ? $input['type'] : $post->post_type;
 			$post_type = get_post_type_object( $_post_type );
@@ -107,15 +111,24 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 					return $author_id;
 			}
 
-			if ( 'publish' === $input['status'] && 'publish' !== $post->post_status && !current_user_can( 'publish_post', $post->ID ) ) {
+			if ( ( isset( $input['status'] ) && 'publish' === $input['status'] ) && 'publish' !== $post->post_status && !current_user_can( 'publish_post', $post->ID ) ) {
 				$input['status'] = 'pending';
 			}
 			$last_status = $post->post_status;
-			$new_status = $input['status'];
+			$new_status = isset( $input['status'] ) ? $input['status'] : $last_status;
+
+			// Make sure that drafts get the current date when transitioning to publish if not supplied in the post.
+			$date_in_past = ( strtotime($post->post_date_gmt) < time() );
+			if ( 'publish' === $new_status && 'draft' === $last_status && ! isset( $input['date_gmt'] ) && $date_in_past ) {
+				$input['date_gmt'] = gmdate( 'Y-m-d H:i:s' );
+			}
 		}
 
-		// Fix for https://iorequests.wordpress.com/2014/08/13/scheduled-posts-made-in-the/
-		// See: https://a8c.slack.com/archives/io/p1408047082000273
+		if ( function_exists( 'wpcom_switch_to_locale' ) ) {
+			// fixes calypso-pre-oss #12476: respect blog locale when creating the post slug
+			wpcom_switch_to_locale( get_blog_lang_code( $blog_id ) );
+		}
+
 		// If date was set, $this->input will set date_gmt, date still needs to be adjusted for the blog's offset
 		if ( isset( $input['date_gmt'] ) ) {
 			$gmt_offset = get_option( 'gmt_offset' );
@@ -160,6 +173,7 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 				 * Consequence: To add a category/tag whose name is '123', the client must
 				 * first look up its ID.
 				 */
+				$term = (string) $term; // ctype_digit compat
 				if ( ctype_digit( $term ) ) {
 					$term = (int) $term;
 				}
@@ -173,7 +187,11 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 					}
 					// only add a new tag/cat if the user has access to
 					$tax = get_taxonomy( $taxonomy );
-					if ( !current_user_can( $tax->cap->edit_terms ) ) {
+
+					// see https://core.trac.wordpress.org/ticket/26409
+					if ( 'category' === $taxonomy && ! current_user_can( $tax->cap->edit_terms ) ) {
+						continue;
+					} else if ( ! current_user_can( $tax->cap->assign_terms ) ) {
 						continue;
 					}
 
@@ -210,15 +228,13 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 			unset( $input['slug'] );
 		}
 
-		if ( true === $input['comments_open'] )
-			$insert['comment_status'] = 'open';
-		else if ( false === $input['comments_open'] )
-			$insert['comment_status'] = 'closed';
+		if ( isset( $input['comments_open'] ) ) {
+			$insert['comment_status'] = ( true === $input['comments_open'] ) ? 'open' : 'closed';
+		}
 
-		if ( true === $input['pings_open'] )
-			$insert['ping_status'] = 'open';
-		else if ( false === $input['pings_open'] )
-			$insert['ping_status'] = 'closed';
+		if ( isset( $input['pings_open'] ) ) {
+			$insert['ping_status'] = ( true === $input['pings_open'] ) ? 'open' : 'closed';
+		}
 
 		unset( $input['comments_open'], $input['pings_open'] );
 
@@ -227,42 +243,29 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 			unset( $input['menu_order'] );
 		}
 
-		if ( isset( $input['publicize'] ) ) {
-			$publicize = $input['publicize'];
-			unset( $input['publicize'] );
-		}
+		$publicize = isset( $input['publicize'] ) ? $input['publicize'] : null;
+		unset( $input['publicize'] );
 
-		if ( isset( $input['publicize_message'] ) ) {
-			$publicize_custom_message = $input['publicize_message'];
-			unset( $input['publicize_message'] );
-		}
+		$publicize_custom_message = isset( $input['publicize_message'] ) ? $input['publicize_message'] : null;
+		unset( $input['publicize_message'] );
 
 		if ( isset( $input['featured_image'] ) ) {
 			$featured_image = trim( $input['featured_image'] );
 			$delete_featured_image = empty( $featured_image );
-			$featured_image = $input['featured_image'];
 			unset( $input['featured_image'] );
 		}
 
-		if ( isset( $input['metadata'] ) ) {
-			$metadata = $input['metadata'];
-			unset( $input['metadata'] );
-		}
+		$metadata = isset( $input['metadata'] ) ? $input['metadata'] : null;
+		unset( $input['metadata'] );
 
-		if ( isset( $input['likes_enabled'] ) ) {
-			$likes = $input['likes_enabled'];
-			unset( $input['likes_enabled'] );
-		}
+		$likes = isset( $input['likes_enabled'] ) ? $input['likes_enabled'] : null;
+		unset( $input['likes_enabled'] );
 
-		if ( isset( $input['sharing_enabled'] ) ) {
-			$sharing = $input['sharing_enabled'];
-			unset( $input['sharing_enabled'] );
-		}
+		$sharing = isset( $input['sharing_enabled'] ) ? $input['sharing_enabled'] : null;
+		unset( $input['sharing_enabled'] );
 
-		if ( isset( $input['sticky'] ) ) {
-			$sticky = $input['sticky'];
-			unset( $input['sticky'] );
-		}
+		$sticky = isset( $input['sticky'] ) ? $input['sticky'] : null;
+		unset( $input['sticky'] );
 
 		foreach ( $input as $key => $value ) {
 			$insert["post_$key"] = $value;
@@ -281,7 +284,7 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 
 		if ( $new ) {
 
-			if ( false === strpos( $input['content'], '[gallery' ) && ( $has_media || $has_media_by_url ) ) {
+			if ( isset( $input['content'] ) && ! has_shortcode( $input['content'], 'gallery' ) && ( $has_media || $has_media_by_url ) ) {
 				switch ( ( $has_media + $has_media_by_url ) ) {
 				case 0 :
 					// No images - do nothing.
@@ -308,7 +311,16 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 				$insert['edit_date'] = true;
 			}
 
-			$post_id = wp_update_post( (object) $insert );
+			// this two-step process ensures any changes submitted along with status=trash get saved before trashing
+			if ( isset( $input['status'] ) && 'trash' === $input['status'] ) {
+				// if we insert it with status='trash', it will get double-trashed, so insert it as a draft first
+				unset( $insert['status'] );
+				$post_id = wp_update_post( (object) $insert );
+				// now call wp_trash_post so post_meta gets set and any filters get called
+				wp_trash_post( $post_id );
+			} else {
+				$post_id = wp_update_post( (object) $insert );
+			}
 
 		}
 
@@ -341,6 +353,7 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 		}
 
 		// Set like status for the post
+		/** This filter is documented in modules/likes.php */
 		$sitewide_likes_enabled = (bool) apply_filters( 'wpl_is_enabled_sitewide', ! get_option( 'disabled_likes' ) );
 		if ( $new ) {
 			if ( $sitewide_likes_enabled ) {
@@ -389,17 +402,29 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 			}
 		}
 
-		if ( true === $sticky ) {
-			stick_post( $post_id );
-		} else {
-			unstick_post( $post_id );
+		if ( isset( $sticky ) ) {
+			if ( true === $sticky ) {
+				stick_post( $post_id );
+			} else {
+				unstick_post( $post_id );
+			}
 		}
 
 		// WPCOM Specific (Jetpack's will get bumped elsewhere
-		// Tracks how many posts are published and sets meta so we can track some other cool stats (like likes & comments on posts published)
-		if ( ( $new && 'publish' == $input['status'] ) || ( !$new && isset( $last_status ) && 'publish' != $last_status && isset( $new_status ) && 'publish' == $new_status ) ) {
-			if ( function_exists( 'bump_stats_extras' ) ) {
-				bump_stats_extras( 'api-insights-posts', $this->api->token_details['client_id'] );
+		// Tracks how many posts are published and sets meta
+		// so we can track some other cool stats (like likes & comments on posts published)
+		if ( defined( 'IS_WPCOM' ) && IS_WPCOM ) {
+			if (
+				( $new && 'publish' == $input['status'] )
+				|| (
+					! $new && isset( $last_status )
+					&& 'publish' != $last_status
+					&& isset( $new_status )
+					&& 'publish' == $new_status
+				)
+			) {
+				/** This action is documented in modules/widgets/social-media-icons.php */
+				do_action( 'jetpack_bump_stats_extras', 'api-insights-posts', $this->api->token_details['client_id'] );
 				update_post_meta( $post_id, '_rest_api_published', 1 );
 				update_post_meta( $post_id, '_rest_api_client_id', $this->api->token_details['client_id'] );
 			}
@@ -475,10 +500,22 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 			}
 		}
 
-		if ( !empty( $publicize_custom_message ) )
-			update_post_meta( $post_id, $GLOBALS['publicize_ui']->publicize->POST_MESS, trim( $publicize_custom_message ) );
+		if ( ! is_null( $publicize_custom_message ) ) {
+			if ( empty( $publicize_custom_message ) ) {
+				delete_post_meta( $post_id, $GLOBALS['publicize_ui']->publicize->POST_MESS );
+			} else {
+				update_post_meta( $post_id, $GLOBALS['publicize_ui']->publicize->POST_MESS, trim( $publicize_custom_message ) );
+			}
+		}
 
-		set_post_format( $post_id, $insert['post_format'] );
+		if ( ! empty( $insert['post_format'] ) ) {
+			if ( 'default' !== strtolower( $insert['post_format'] ) ) {
+				set_post_format( $post_id, $insert['post_format'] );
+			}
+			else {
+				set_post_format( $post_id, get_option( 'default_post_format' ) );
+			}
+		}
 
 		if ( isset( $featured_image  ) ) {
 			$this->parse_and_set_featured_image( $post_id, $delete_featured_image, $featured_image );
@@ -488,6 +525,11 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 			foreach ( (array) $metadata as $meta ) {
 
 				$meta = (object) $meta;
+
+				// Custom meta description can only be set on sites that have a business subscription.
+				if ( Jetpack_SEO_Posts::DESCRIPTION_META_KEY == $meta->key && ! Jetpack_SEO_Utils::is_enabled_jetpack_seo() ) {
+					return new WP_Error( 'unauthorized', __( 'SEO tools are not enabled for this site.', 'jetpack' ), 403 );
+				}
 
 				$existing_meta_item = new stdClass;
 
@@ -504,6 +546,10 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 				if ( ! empty( $meta->id ) ) {
 					$meta->id = absint( $meta->id );
 					$existing_meta_item = get_metadata_by_mid( 'post', $meta->id );
+					if ( $post_id !== (int) $existing_meta_item->post_id ) {
+						// Only allow updates for metadata on this post
+						continue;
+					}
 				}
 
 				$unslashed_meta_key = wp_unslash( $meta->key ); // should match what the final key will be
@@ -535,7 +581,7 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 
 						if ( ! empty( $meta->id ) || ! empty( $meta->previous_value ) ) {
 							continue;
-						} elseif ( ! empty( $meta->key ) && ! empty( $meta->value ) && ( current_user_can( 'add_post_meta', $post_id, $unslashed_meta_key ) ) || $this->is_metadata_public( $meta->key ) ) {
+						} elseif ( ! empty( $meta->key ) && ! empty( $meta->value ) && ( current_user_can( 'add_post_meta', $post_id, $unslashed_meta_key ) ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) {
 							add_post_meta( $post_id, $meta->key, $meta->value );
 						}
 
@@ -544,11 +590,11 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 
 						if ( ! isset( $meta->value ) ) {
 							continue;
-						} elseif ( ! empty( $meta->id ) && ! empty( $existing_meta_item->meta_key ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_existing_meta_key ) || $this->is_metadata_public( $meta->key ) ) ) {
+						} elseif ( ! empty( $meta->id ) && ! empty( $existing_meta_item->meta_key ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_existing_meta_key ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) ) {
 							update_metadata_by_mid( 'post', $meta->id, $meta->value );
-						} elseif ( ! empty( $meta->key ) && ! empty( $meta->previous_value ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_meta_key ) || $this->is_metadata_public( $meta->key ) ) ) {
+						} elseif ( ! empty( $meta->key ) && ! empty( $meta->previous_value ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_meta_key ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) ) {
 							update_post_meta( $post_id, $meta->key,$meta->value, $meta->previous_value );
-						} elseif ( ! empty( $meta->key ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_meta_key ) || $this->is_metadata_public( $meta->key ) ) ) {
+						} elseif ( ! empty( $meta->key ) && ( current_user_can( 'edit_post_meta', $post_id, $unslashed_meta_key ) || WPCOM_JSON_API_Metadata::is_public( $meta->key ) ) ) {
 							update_post_meta( $post_id, $meta->key, $meta->value );
 						}
 
@@ -558,6 +604,17 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 			}
 		}
 
+		/**
+		 * Fires when a post is created via the REST API.
+		 *
+		 * @module json-api
+		 *
+		 * @since 2.3.0
+		 *
+		 * @param int $post_id Post ID.
+		 * @param array $insert Data used to build the post.
+		 * @param string $new New post URL suffix.
+		 */
 		do_action( 'rest_api_inserted_post', $post_id, $insert, $new );
 
 		$return = $this->get_post_by( 'ID', $post_id, $args['context'] );
@@ -569,9 +626,12 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 			$return['preview_nonce'] = wp_create_nonce( 'post_preview_' . $input['parent'] );
 		}
 
-		// workaround for sticky test occasionally failing, maybe a race condition with stick_post() above
-		$return['sticky'] = ( true === $sticky );
+		if ( isset( $sticky ) ) {
+			// workaround for sticky test occasionally failing, maybe a race condition with stick_post() above
+			$return['sticky'] = ( true === $sticky );
+		}
 
+		/** This action is documented in json-endpoints/class.wpcom-json-api-site-settings-endpoint.php */
 		do_action( 'wpcom_json_api_objects', 'posts' );
 
 		return $return;
@@ -598,9 +658,14 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 			return $return;
 		}
 
+		/** This action is documented in json-endpoints/class.wpcom-json-api-site-settings-endpoint.php */
 		do_action( 'wpcom_json_api_objects', 'posts' );
 
-		wp_delete_post( $post->ID );
+		// we need to call wp_trash_post so that untrash will work correctly for all post types
+		if ( 'trash' === $post->post_status )
+			wp_delete_post( $post->ID );
+		else
+			wp_trash_post( $post->ID );
 
 		$status = get_post_status( $post->ID );
 		if ( false === $status ) {
@@ -624,6 +689,7 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 			return new WP_Error( 'unauthorized', 'User cannot restore trashed posts', 403 );
 		}
 
+		/** This action is documented in json-endpoints/class.wpcom-json-api-site-settings-endpoint.php */
 		do_action( 'wpcom_json_api_objects', 'posts' );
 
 		wp_untrash_post( $post->ID );
@@ -645,7 +711,7 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 			return $featured_image;
 		}
 
-		$featured_image_id = $this->handle_media_sideload( $featured_image, $post_id );
+		$featured_image_id = $this->handle_media_sideload( $featured_image, $post_id, 'image' );
 
 		if ( empty( $featured_image_id ) || ! is_int( $featured_image_id ) )
 			return false;
@@ -658,6 +724,7 @@ class WPCOM_JSON_API_Update_Post_Endpoint extends WPCOM_JSON_API_Post_Endpoint {
 		if ( empty( $author ) || ! post_type_supports( $post_type, 'author' ) )
 			return get_current_user_id();
 
+		$author = (string) $author;
 		if ( ctype_digit( $author ) ) {
 			$_user = get_user_by( 'id', $author );
 			if ( ! $_user || is_wp_error( $_user ) )

@@ -1,3 +1,394 @@
+2017-02-03 17:17  donncha
+
+	* readme.txt, wp-cache.php: Bump version number to 1.4.9 and update
+	  changelog
+
+2017-02-03 17:11  donncha
+
+	* wp-cache-phase1.php, wp-cache-phase2.php, wp-cache.php: * Github
+	  merge:
+	  * Make sure $cache_path has a trailing slash
+	  (https://github.com/Automattic/wp-super-cache/pull/77)
+	  * Remove flush()
+	  (https://github.com/Automattic/wp-super-cache/pull/127) but also
+	  check if headers are empty and flush and get headers again.
+	  (https://github.com/Automattic/wp-super-cache/pull/179)
+	  * Add fix for customizer
+	  (https://github.com/Automattic/wp-super-cache/pull/161) and don't
+	  cache PUT AND DELETE requests
+	  (https://github.com/Automattic/wp-super-cache/pull/178)
+	  * Check for superglobals before using them.
+	  (https://github.com/Automattic/wp-super-cache/pull/131)
+
+2017-02-03 16:54  donncha
+
+	* plugins/multisite.php, wp-cache-base.php, wp-cache.php: Github
+	  merge: Need to check more than WP_ALLOW_MULTISITE to detect
+	  multisite installs.
+	  https://github.com/Automattic/wp-super-cache/issues/97
+
+2017-02-03 15:07  donncha
+
+	* wp-cache-phase1.php: Github merge:
+	  https://github.com/Automattic/wp-super-cache/pull/161 and also
+	  don't cache PUT and DELETE requests (caught earlier than before)
+
+2017-02-03 14:45  donncha
+
+	* plugins/jetpack.php: Remove extra ">", props @dd32
+	  https://github.com/Automattic/wp-super-cache/pull/168
+
+2017-02-03 14:37  donncha
+
+	* wp-super-cache.pot: Updated translation file
+
+2017-02-03 14:33  donncha
+
+	* wp-cache.php: github merge: some of the changes that were
+	  supposed to be checked in the previous merge didn't make it.
+
+2017-02-03 10:18  donncha
+
+	* readme.txt: * Bump the tested version.
+	  * Update the changelog
+
+2017-02-03 10:13  donncha
+
+	* Changelog.txt: Updated changelog
+
+2017-02-02 18:14  donncha
+
+	* readme.txt: Updated readme.txt changelog and docs
+
+2017-02-02 18:08  donncha
+
+	* ossdl-cdn.php, readme.txt, wp-cache-phase2.php, wp-cache.php:
+	  Sync with GITHUB:
+	  * Don't delete so many files on blogs with static homepages.
+	  https://github.com/Automattic/wp-super-cache/pull/175
+	  * Discourage use of file locking because semaphores cause
+	  problems and it's not needed.
+	  https://github.com/Automattic/wp-super-cache/pull/174
+	  * Reorganise the settings page in small ways
+	  https://github.com/Automattic/wp-super-cache/pull/173
+	  * Fixed XSS in settings page. Props @jaypatel
+	  https://github.com/Automattic/wp-super-cache/pull/172
+
+2017-01-11 16:58  kraftbj
+
+	* readme.txt, wp-cache-phase2.php: Github #138: Do not cache
+	  PUT/DELETE requests
+
+2016-12-09 15:38  kraftbj
+
+	* wp-cache-phase2.php: Check that header parts exist to avoid
+	  `Undefined Index` notices
+
+2016-12-09 15:37  kraftbj
+
+	* wp-cache-phase2.php: Update to Git master
+
+2016-12-09 10:25  donncha
+
+	* readme.txt: Bump the "tested up to" value
+
+2016-08-01 20:39  kraftbj
+
+	* readme.txt: Bump tested version to 4.6
+
+2016-05-09 14:56  kraftbj
+
+	* readme.txt: Bump tested version
+
+2016-03-07 15:24  kraftbj
+
+	* readme.txt: Update readme for previous commit
+
+2016-03-07 15:20  kraftbj
+
+	* wp-cache-phase2.php: Catch up SVN to GH
+
+2016-03-07 13:46  donncha
+
+	* readme.txt, wp-cache.php: Bumped version to 1.4.8 and updated
+	  changelog
+
+2016-03-07 13:39  donncha
+
+	* wp-super-cache.pot: Updated translation pot file
+
+2016-03-07 12:37  donncha
+
+	* wp-cache.php: Remove this link as Google is reporting it as
+	  malware. It's still available at
+	  https://web.archive.org/web/20150914095007/http://bytes.com/topic/php/answers/3917-seconds-converted-hh-mm-ss.
+	  Ref: https://github.com/Automattic/wp-super-cache/issues/106
+
+2015-12-16 18:14  kraftbj
+
+	* readme.txt, wp-cache.php: Update readme for 1.4.7
+
+2015-12-16 16:59  kraftbj
+
+	* wp-cache.php: Fix settings page layout breakage in 4.4.
+
+2015-12-02 15:50  kraftbj
+
+	* ossdl-cdn.php, wp-cache.php: Corrects typos. See
+	  https://github.com/Automattic/wp-super-cache/issues/81
+	  
+	  props https://github.com/christophherr
+
+2015-10-21 19:54  kraftbj
+
+	* wp-cache-phase1.php: Remove variable no longer defined after
+	  previous update.
+
+2015-10-09 18:06  donncha
+
+	* Changelog.txt, readme.txt, wp-cache.php: Bump version to 1.4.6
+	  and update changelog
+
+2015-10-08 17:14  donncha
+
+	* wp-cache.php: Don't check if .htaccess already created as the
+	  index check already created it. Props Tigertech. Ref:
+	  https://wordpress.org/support/topic/all-website-pages-downloading-gz-file-after-latest-update?replies=28#post-7494087
+
+2015-09-25 11:20  donncha
+
+	* Changelog.txt: Updated changelog
+
+2015-09-25 10:55  donncha
+
+	* readme.txt, wp-cache.php: Bump version to release 1.4.5 and add
+	  changelog
+
+2015-09-24 15:37  donncha
+
+	* wp-cache-base.php, wp-cache-phase1.php, wp-cache-phase2.php,
+	  wp-cache.php: * Add index.html files and "-index" directives to
+	  stop indexing of directories
+	  * Sanitise input on settings page
+	  * MD5 the cookie, use JSON to encode meta files, and rename them
+	  to .php
+
+2015-09-24 11:37  donncha
+
+	* readme.txt: Changed homepage link and ocaoimh.ie to z9.io
+
+2015-09-24 11:33  donncha
+
+	* readme.txt: Minor update to the description of cache rebuild
+	  feature.
+
+2015-09-24 10:39  donncha
+
+	* wp-cache-phase2.php: Reduce "needs rebuild" time to 10 seconds,
+	  so those pages refresh faster.
+
+2015-08-28 16:28  donncha
+
+	* wp-cache-phase1.php: Because sometimes your editing in HTTPS
+	  while your site is on HTTP. Thanks kraftbj
+
+2015-08-25 21:42  kraftbj
+
+	* wp-cache-phase2.php: Swap post_permalink with get_permalink. Both
+	  are exactly the same and old enough to not impact any users.
+	  post_permalink slated for deprecation in 4.4.
+
+2015-08-10 14:06  donncha
+
+	* wp-cache-phase2.php: Avoid PHP warnings, props @daneodekirk
+
+2015-08-10 13:25  donncha
+
+	* wp-cache.php: Use $wpdb->blogid rather than get_current_blog_id
+	  as the former returns 0 on single site installs. Props
+	  @daneodekirk
+
+2015-07-30 10:13  donncha
+
+	* Changelog.txt, readme.txt: Updated changelog
+
+2015-07-29 13:08  donncha
+
+	* wp-cache-phase2.php: Remove this function call as it's not
+	  defined. Ref:
+	  https://github.com/Automattic/wp-super-cache/commit/4f3229009e5c6c8487dd883910ea076a8e3b7e26
+
+2015-07-27 16:36  kraftbj
+
+	* wp-cache.php: Don't flush settings for expiry time and garbage
+	  collection. See
+	  https://github.com/Automattic/wp-super-cache/pull/49
+
+2015-07-27 16:28  donncha
+
+	* wp-cache-base.php: Remove CacheMeta class as it's not used any
+	  more and caused APC errors. Ref:
+	  https://github.com/Automattic/wp-super-cache/pull/21
+
+2015-07-24 15:21  kraftbj
+
+	* wp-cache.php: Check if listfile isset to prevent PHP warning.
+
+2015-07-23 13:56  donncha
+
+	* wp-cache.php: Remember the settings on the advanced settings page
+	  when submitting the easy settings form. Thanks Jeremy Herve for
+	  the bug report!
+
+2015-07-22 15:52  donncha
+
+	* Changelog.txt, readme.txt: Updated changelog
+
+2015-07-22 11:25  donncha
+
+	* wp-cache-phase2.php: Fixed typo in debug log entry
+
+2015-07-15 11:56  donncha
+
+	* wp-cache.php: * Added uninstall function as well as deactivate
+	  function. The deactivate function does not delete the config file
+	  but it does disable caching because scheduled jobs must be
+	  enabled in the settings page when the config file is used on
+	  activation again.
+	  * Fixed a bug where deactivating the plugin without visiting the
+	  settings page causes a fatal error so the plugin can't be
+	  deactivated
+
+2015-07-02 14:19  donncha
+
+	* wp-cache-phase2.php: Minor changes to debugging
+
+2015-07-02 13:58  donncha
+
+	* wp-cache-phase2.php: * prune_super_cache: exit immediately if the
+	  file to be deleted doesn't exist
+	  * Add extra debugging
+
+2015-07-02 12:10  donncha
+
+	* wp-cache-phase2.php: Remove https from the home url as well
+
+2015-07-01 16:37  donncha
+
+	* wp-cache-phase2.php: As so many checks for "should we cache this
+	  page?" were put to the end of page generation the rebuild system
+	  was broken. This fixes it by deleting the rebuild files created
+	  earlier if the current page isn't to be cached (and thus creating
+	  new cache files)
+
+2015-07-01 15:46  donncha
+
+	* wp-cache-phase1.php: Always make sure supercachedirs have
+	  trailing slashes
+
+2015-07-01 15:30  donncha
+
+	* wp-cache-phase1.php: Cache the output of
+	  wp_cache_get_cookies_values() for repeat calls
+
+2015-07-01 14:59  donncha
+
+	* wp-cache-phase1.php: Use the pid to help logging on busy servers
+
+2015-07-01 14:51  donncha
+
+	* plugins/domain-mapping.php: Suercache urls end in slashes
+
+2015-06-23 15:32  kraftbj
+
+	* wp-cache-phase1.php: Check for If-Modified-Since before using it
+	  as it is not always defined.
+
+2015-06-03 02:36  kraftbj
+
+	* advanced-cache.php: Do not display broken messages for XMLRPC,
+	  REST, AJAX requests.
+
+2015-05-15 14:12  kraftbj
+
+	* wp-cache-phase2.php, wp-cache.php: Fix improper site_url usage
+	  * Update site_url to home_url in another e-mail subject
+	  * Use admin_url instead of constructing URL from site_url
+
+2015-05-15 14:08  kraftbj
+
+	* wp-cache.php: Use home_url in Preload Cron e-mails.
+
+2015-05-15 11:13  donncha
+
+	* wp-cache-phase1.php, wp-cache-phase2.php: Revert 1149165 as it's
+	  not needed any more.
+
+2015-05-15 11:02  donncha
+
+	* readme.txt: Bump the tested to version number to 4.2.2
+
+2015-05-13 21:01  kraftbj
+
+	* wp-cache.php: Improve the 1&1 hosting workaround to reduce false
+	  positives.
+
+2015-05-01 13:53  donncha
+
+	* wp-cache.php: Check if it's an array to avoid PHP warning
+
+2015-05-01 13:51  donncha
+
+	* wp-cache-phase2.php: Added some extra debugging
+
+2015-04-29 16:55  kraftbj
+
+	* readme.txt: Condense changelog to keep it nice and short :)
+
+2015-04-29 15:58  kraftbj
+
+	* readme.txt: Update changelog to keep pace with trunk.
+
+2015-04-29 15:45  donncha
+
+	* wp-cache-phase1.php, wp-cache-phase2.php: Check if mb_strlen()
+	  exists before WordPress loads so it doesn't use the limited
+	  mb_strlen compat function in WordPress 4.2. Ref:
+	  https://wordpress.org/support/topic/421-initial-blank-page-load?replies=11
+
+2015-04-28 15:53  kraftbj
+
+	* readme.txt: Add previous commits to readme.txt as a running
+	  changelog to make it easier to compile for next release.
+
+2015-04-28 15:24  kraftbj
+
+	* wp-cache.php: Preload Cron E-mail Updates
+
+2015-04-28 15:17  kraftbj
+
+	* wp-cache.php: Preload only public post types. See
+	  https://github.com/Automattic/wp-super-cache/pull/18
+
+2015-04-21 18:22  kraftbj
+
+	* readme.txt: Tested to tag bump to 4.2
+
+2015-04-07 16:00  donncha
+
+	* wp-cache-phase2.php: Don't disable supercache caching on CRON
+	  requests. Fixes problems clearing front page cache on scheduled
+	  posts
+
+2015-04-04 22:57  donncha
+
+	* wp-cache-phase1.php: Fix the log_message, finally. Props
+	  webaware.
+
+2015-04-04 12:17  donncha
+
+	* Changelog.txt: Updated changelog
+
 2015-04-04 12:13  donncha
 
 	* readme.txt: Updated changelog
