@@ -1,0 +1,123 @@
+/*
+ Theme Name:   Panorama (HiMolde) 2019
+ Theme URI:    http://home.himolde.no/~nordhaug/wp/panorama_2019
+ Description:  A Twenty Fourteen Child theme for HiMolde news paper
+ Author:       Hans Fredrik Nordhaug
+ Author URI:   http://home.himolde.no/~nordhaug/
+ Template:     twentyfourteen
+ Version:      1.0.1
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  panorama-himolde
+*/
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+
+
+/* Centered layout */
+.site {
+	margin: 0px auto;
+}
+
+/* Site logo settings */
+img#site-logo {
+	width: 200px;
+}
+@media screen and (min-width: 401px) {
+	img#site-logo {
+		width: 250px;
+	}
+}
+@media screen and (min-width: 594px) {
+	img#site-logo {
+		width: auto;
+	}
+}
+
+/* Slogan adjustment */
+h2.site-description {
+	font-style: italic;
+	margin-top: 20px;
+}
+
+/* Title adjustments */
+.article-title, .page-title, .archive-title {
+	font-weight: bold;
+	font-size: 44px;
+	text-transform: none;
+}
+.entry-title {
+	font-weight: bold;
+	font-size: 40px;
+	text-transform: none;
+}
+.featured-content .entry-title {
+	font-weight: bold;
+	text-transform: none;
+}
+
+/* Header adjustment */
+.post-thumbnail {
+	background: white;
+}
+/*
+a.post-thumbnail:hover {
+	background-color: #999;
+}
+*/
+.site-content .has-post-thumbnail .entry-header {
+	margin-top: 0px;
+}
+.singular .site-content .hentry.has-post-thumbnail {
+	margin-top: 0px;
+}
+article.has-post-thumbnail div.wp-caption-text {
+	padding: 0px 30px;
+}
+.content-area {
+	padding-top: 0px;
+}
+.content-sidebar {
+	padding-top: 10px;
+}
+.header-main {
+	min-height: 127px;
+}
+
+/* Adjust whitespace around widgets in left sidebare */
+.widget {
+	margin-top: 10px;
+	margin-bottom: 38px;
+}
+
+.panorama-social {
+	max-height: 20px;
+	margin-top: 5px;
+}
+
+/* Hide post navigation - previous/next */
+nav.post-navigation {
+	display: none;
+}
+
+/* Disqus */
+div#disqus_thread {
+	max-width: 474px;
+	margin: 0px auto;
+}
+
+/* Popuplar post and RSS feeds */
+.widget_rss li {
+	margin-bottom: 0px;
+}
+.widget_rss li,
+.widget.popular-posts li {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 8px 0 9px;
+}
+
+.widget_rss li:first-child,
+.widget.popular-posts li:first-child {
+	border-top: 0;
+}
